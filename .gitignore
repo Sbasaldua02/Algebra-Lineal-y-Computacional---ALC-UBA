@@ -1,0 +1,15 @@
+# Windows / OneDrive
+desktop.ini
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Spyder
+.spyproject/
