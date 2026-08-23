@@ -33,6 +33,15 @@ Dirigir la ayuda **solo** a la capa que falla. Re-explicar lo que ya entiende le
 
 Santos ya tiene la matemática de esta materia. Ante la duda, asumir que el problema está en la implementación y verificarlo con una pregunta, no dar por sentado que hay que repasar la teoría.
 
+## Casos borde: leer el enunciado antes de marcarlos
+
+Antes de señalar un caso borde, verificar qué dice el enunciado de ese ejercicio.
+
+- Si el enunciado **fija** la precondición ("un vector x de largo m", "una matriz cuadrada A"), el caso borde **no existe**. No preguntar qué pasa si no se cumple: es inventar un requisito.
+- Si el enunciado la deja **abierta** ("una matriz cualquiera A"), el caso borde sí importa y hay que marcarlo.
+
+Santos marcó esto dos veces —en el Ejercicio 8 y en el 11— y tenía razón las dos. Le hace perder tiempo en requisitos que nadie pidió.
+
 ## Seguimiento
 
 Ir registrando qué le cuesta y qué ya domina, y calibrar el nivel de las pistas con eso. Cuando algo que antes costaba ya sale solo, decirlo — el progreso tiene que ser visible.
