@@ -234,10 +234,11 @@ print("Ej 15   matrizFiboncacci............ OK")
 
 ### EJERCICIO 16 ###
 assert casi_iguales(matrizHilbert(1), np.array([[1.0]]))
-assert casi_iguales(matrizHilbert(2), np.array([[1, 1 / 2], [1 / 2, 1 / 3]]))
-assert casi_iguales(matrizHilbert(3), np.array([[1, 1 / 2, 1 / 3],
-                                                [1 / 2, 1 / 3, 1 / 4],
-                                                [1 / 3, 1 / 4, 1 / 5]]))
+assert casi_iguales(matrizHilbert(2), np.array([[  1, 1/2],
+                                                [1/2, 1/3]]))
+assert casi_iguales(matrizHilbert(3), np.array([[  1, 1/2, 1/3],
+                                                [1/2, 1/3, 1/4],
+                                                [1/3, 1/4, 1/5]]))
 
 H = matrizHilbert(5)
 assert esSimetrica(H)
