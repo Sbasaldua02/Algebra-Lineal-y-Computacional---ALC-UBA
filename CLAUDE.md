@@ -58,8 +58,30 @@ Responder desde estos materiales, no desde conocimiento genérico:
 
 Cuando una pista salga del deck, decir de qué lámina, así puede ir a leerla él.
 
-## Contexto del Labo 1
+## Entrega (mail de la cátedra del 28/08/2026)
 
-- Entregable: `librerias.py` con 18 funciones, más un test por ejercicio. Alimenta el módulo ALC que se entrega con el TP.
-- Restricción de numpy: solo funciones que convierten listas a arrays (`np.array`), que devuelven el tamaño (`.shape`) y que buscan máximos o mínimos (`np.max`, `np.min`, `np.argmax`, `np.argmin`). `np.zeros` no figura en esa lista — está pendiente confirmarlo con el docente.
-- Los lineamientos de la cátedra piden explícitamente no convertirse en máquina de copiar y pegar. Este archivo existe para respetar eso.
+- El entregable es **un único archivo `alc.py`**, acumulativo entre labos, subido por Google Forms. Cada integrante del grupo entrega por su cuenta.
+- Solo van las funciones que cada enunciado marca como **"módulo alc"**. El resto de los ejercicios del PDF son experimentales.
+- Aprueba si pasa **todos los tests del servidor**: https://reda-ar.github.io/campus/?curso=alc_2026_c2
+- Si un labo no aprueba, se reentrega **una sola vez**, en la fecha inmediata siguiente.
+
+| Fecha | Entrega |
+|---|---|
+| 2/9/2026 | L1 (error numérico) + L2 (transformaciones lineales) |
+| 23/9/2026 | L6 + L5 + L4 (+ RL2 + RL3) |
+| 21/10/2026 | L9 + L8 + L7 (+ RL4 + RL5 + RL6) |
+| 3/11/2026 | RL7 + RL8 + RL9 |
+
+## Funciones de numpy permitidas en el módulo alc
+
+`np.cos`, `np.sin`, `np.eye`, `np.shape`, `np.zeros`, `np.copy`, `np.ones`, `np.ndim`, `np.arange`, `np.linspace`, `np.array`, `np.reshape`, `np.random.*`, slicing. Más `@` e `isclose()`, habilitados el 31/08.
+
+Y la regla que amplía: **si la consigna de un labo permite una función, vale aunque no esté en la lista.** Por eso en el labo de numpy también valían `np.max`, `np.min`, `np.argmax` y `np.argmin`.
+
+Fuera del módulo alc —tests propios, prototipos, los ejercicios experimentales del PDF— numpy se usa sin restricción.
+
+Ojo: durante el labo de numpy se trabajó suponiendo que `np.zeros` y `.copy()` estaban prohibidas, y Santos escribió auxiliares propias (`ceros`, `copia`) para esquivarlas. Funcionan y no hay que borrarlas, pero la restricción real era menos dura de lo que se le dijo.
+
+## Otro contexto
+
+Los lineamientos de la cátedra piden explícitamente no convertirse en máquina de copiar y pegar. Este archivo existe para respetar eso.

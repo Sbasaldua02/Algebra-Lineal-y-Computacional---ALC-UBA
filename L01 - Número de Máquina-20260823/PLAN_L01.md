@@ -50,29 +50,41 @@ def matricesIguales(A, B):  # True si son iguales; contemplar dimensiones distin
 Más los **10 ejercicios**, que en su mayoría son de exploración y análisis, no de
 programar funciones. Es un labo mucho más conceptual que el de numpy.
 
-**Diferencia clave con el labo anterior:** acá **no hay restricción de numpy**. El
-enunciado usa `np.sqrt`, `np.float32`, `np.finfo`, `np.linalg.inv` y `@` sin
-problema. No repetir la discusión de `np.zeros`.
+**Sobre numpy:** la lista oficial de la cátedra (mail del 28/08) para el módulo alc es
+`np.cos`, `np.sin`, `np.eye`, `np.shape`, `np.zeros`, `np.copy`, `np.ones`, `np.ndim`,
+`np.arange`, `np.linspace`, `np.array`, `np.reshape`, `np.random.*`, slicing, más `@` e
+`isclose()`. Y vale todo lo que el enunciado del labo permita explícitamente — este usa
+`np.sqrt`, `np.float32`, `np.finfo` y `np.linalg.inv` en las consignas, así que están
+habilitadas.
+
+Fuera del módulo alc (los ejercicios experimentales del PDF, los gráficos, los tests
+propios) numpy va sin restricción.
+
+**No repetir la discusión de `np.zeros`:** estaba permitida desde el principio.
 
 ---
 
-## 3. Trampa en `tests01.py` — resolver esto primero
+## 3. Nombre del archivo y `tests01.py`
+
+**El entregable oficial es `alc.py`** (mail de la cátedra del 28/08/2026), un único
+archivo acumulativo entre todos los labos, subido por Google Forms. No `librerias.py`
+ni `lab1.py`.
+
+Pero `tests01.py`, el archivo de tests que dieron, hace:
 
 ```python
 from lab1 import error, error_relativo, matricesIguales, esSimetrica
 ```
 
-Dos cosas:
+O sea que **para correr esos tests localmente hace falta un `lab1.py`**, y además tiene
+que exponer `esSimetrica`, que es del labo de numpy. Dos salidas razonables:
+renombrar el import a `alc`, o dejar un `lab1.py` que reexporte de `alc.py`.
 
-1. **El módulo tiene que llamarse `lab1.py`**, no `librerias.py`. El enunciado no
-   fija el nombre, pero el archivo de tests de la cátedra sí lo asume.
-2. **Importa `esSimetrica`**, que es del labo anterior. O sea que `lab1.py` tiene
-   que exponer también las funciones viejas (importándolas de `librerias.py` o
-   reuniendo todo).
+Lo importante es que **`alc.py` termine con todo junto**: las funciones del labo de
+numpy más las tres nuevas. Conviene ordenarlo ahora, antes de que sean nueve labos.
 
-Esto hay que decidirlo antes de escribir la primera línea, porque define la
-estructura de archivos. Es una decisión de organización, no de contenido:
-plantearla como tal y dejar que elija.
+**Fecha de entrega de este labo: 2 de septiembre de 2026**, junto con el L2 de
+transformaciones lineales.
 
 ---
 
