@@ -3,7 +3,7 @@
 # Se apoya en las funciones definidas en librerias.py.
 
 import numpy as np
-from librerias import *
+from labo_0 import *
 
 
 print()
