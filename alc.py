@@ -9,21 +9,12 @@ def error_relativo(x,y):
  return abs(float(x)-float(y))/abs(float(x))
 
 def matricesIguales(A,B):
-    tol = 1e-08
     if np.shape(A) != np.shape(B):
         return False
-    
-    if len(np.shape(A)) == 1:
-       for j in range(len(A)):
-           if abs(A[j] - B[j]) > tol:
-               return False
-       return True
-           
-    n,m = np.shape(A)
-    for i in range(n):
-        for j in range(m):
-            if abs(A[i,j] - B[i,j])>tol:
-                return False
+    C = np.isclose(A, B, 1e-6)
+    for x in np.reshape(C, -1):
+        if not x:
+            return False
     return True
 
 ###### LABO 2 Transformaciones Lineales ######
